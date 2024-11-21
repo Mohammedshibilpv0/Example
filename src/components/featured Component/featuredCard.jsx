@@ -8,7 +8,6 @@ export const projects = [
       title: "An Exclusive Gold Savings Scheme Payment App",
       description:
         "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
       className:'bg-[#EDFFF2E5] ',
       img:EllipsisGreen
     },
@@ -16,7 +15,6 @@ export const projects = [
       title: "All-Round Inventory Management Assistant",
       description:
         "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "https://netflix.com",
       className:'bg-[#FFF6E2E5] ',
       img:EllipsisOrange
     },
@@ -24,7 +22,6 @@ export const projects = [
       title: "Give Your Fine Jewellery A Sleek Online Platform!",
       description:
       "A multinational technology company that specializes in Internet-related services and products.",
-      link: "https://google.com",
       className:'bg-[#DFF3FFAB] ',
       img:EllipsisBlue
   

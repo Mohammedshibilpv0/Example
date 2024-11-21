@@ -3,14 +3,13 @@ import React from "react";
 const AboutProduct = ({ cardData, isDetailsLeft }) => {
   return (
     <div
-      className={`flex p-6 m-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer transition-transform transform ${
-        isDetailsLeft ? "flex-row justify-end" : "flex-row-reverse"
-      } 
-      md:flex-row md:space-x-6 flex-col-reverse`} // Use 'flex-col-reverse' on mobile and 'flex-row' on larger screens
+      className={`flex flex-col md:flex-row p-6 m-4 border border-gray-200 rounded-lg shadow-lg cursor-pointer transition-transform transform ${
+        isDetailsLeft ? "md:flex-row-reverse" : "md:flex-row"
+      }`}
     >
-      {/* First section (details/image) */}
+      {/* Text Content Section */}
       <div className="flex-1 p-4">
-        {isDetailsLeft ? ( 
+        {isDetailsLeft ? (
           <div className="flex flex-col space-y-4">
             <h3 className="text-2xl font-semibold">{cardData.title}</h3>
             <p className="text-lg text-gray-600">{cardData.description}</p>
@@ -18,18 +17,18 @@ const AboutProduct = ({ cardData, isDetailsLeft }) => {
           </div>
         ) : (
           <img
-            className="w-64 h-96 rounded-lg ms-52" // Reduced width (w-48) and auto height
+            className="w-full md:w-64 h-96 rounded-lg mx-auto md:ms-52"
             src={cardData.imageUrl}
             alt="card"
           />
         )}
       </div>
 
-      {/* Second section (image/details) */}
+      {/* Image Section */}
       <div className="flex-1 p-4">
         {isDetailsLeft ? (
           <img
-            className="w-64 h-96 rounded-lg ms-40" 
+            className="w-full md:w-64 h-96 rounded-lg mx-auto md:ms-40"
             src={cardData.imageUrl}
             alt="card"
           />
