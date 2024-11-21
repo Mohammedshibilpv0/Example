@@ -7,11 +7,10 @@ import Services from "../components/services/services";
 import AuServices from "../components/AuServices/AuServices";
 import Card from "../components/card/card";
 import star from "../assets/star.svg";
-import relationship from "../assets/relationship.svg";
+import relationship from "../assets/Relationship.svg";
 import Technical from "../assets/Technical.svg";
 import stayHead from "../assets/stayHead.svg";
 import ClientCard from "../components/ourCient-Card/client-Card";
-import Footer from "../components/footer/footer";
 
 
 
