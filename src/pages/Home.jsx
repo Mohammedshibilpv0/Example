@@ -75,16 +75,17 @@ const Home = () => {
 
       </div>
       
-      <div className="flex flex-col justify-center items-center font-bold mt-5 text-center pb-7">
+  <div className="flex flex-col justify-center items-center font-bold mt-5 text-center pb-7">
   <h3 className="text-lg sm:text-xl md:text-2xl">OUR CLIENTS</h3>
   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3">Brands That Trust Us!</h1>
 
-  {/* Responsive ClientCard */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-    <ClientCard />
-   
-  </div>
+  <div className="w-96 sm:w-auto">
+  <ClientCard />
 </div>
+
+
+</div>
+
 
     </React.Fragment>
   );
