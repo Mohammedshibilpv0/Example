@@ -24,6 +24,7 @@ const cardData =[ {
 
 
 const AuPay = () => {
+    
   return (
   <>
     <div className="relative bg-slate-50 min-h-[70vh] flex items-center px-6 md:px-16 lg:px-24 pt-36 pb-14">
