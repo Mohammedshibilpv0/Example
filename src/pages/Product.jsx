@@ -77,6 +77,7 @@ const AuPay = () => {
     {cardData.map((data)=>(
     <AboutProduct  cardData={data} isDetailsLeft={data.isLeft}/>
     ))}
+    <h1 className='flex justify-center pt-4 font-medium'>FEATURES</h1>
     <ProductCard/>
   </>
   );
