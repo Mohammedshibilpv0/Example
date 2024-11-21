@@ -3,13 +3,24 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Gem } from 'lucide-react';
 import AboutProduct from '../components/about product/aboutProduct';
 import auPay from '../assets/pro.svg';
+import auPay2 from '../assets/pro2.svg';
 import ProductCard from '../components/feturedCard/productsCard';
-const cardData = {
+const cardData =[ {
     title: "The Golden Gold App",
     description: "We're Making Jewellery Scheme Payments Easier.",
     imageUrl:auPay,
     details: "AU Pay introduces a chit scheme payment system that transcends the ordinary - providing your patrons with a secure and efficient way to make their jewellery dreams a reality. Whether they're acquiring a timeless piece for themselves or expressing love through a thoughtful gift, AU Pay ensures that every instalment paid is smooth and as memorable as the purchase itself.Give your customers an immersive chit-scheme management platform where sophistication meets simplicity - experience AU Pay today!",
-  };
+    isLeft:true
+  },
+  {
+    title: "Digi Gold",
+    description: "Next-Gen Gold Investment Platform.",
+    imageUrl:auPay2,
+    details: "DIGI GOLD offers real-time investment in gold, fully backed by actual gold stored in secure vaults. With AU.Pay‘s DIGI GOLD, your customers can easily buy, store, and sell gold online in small, affordable amounts. Whether it‘s 1 gram or 100 grams, DIGI GOLD provides a secure, accessible, and convenient investment solution for all.",
+    isLeft:false
+  }
+
+]
 
 
 const AuPay = () => {
@@ -62,7 +73,9 @@ const AuPay = () => {
       </div>
     </div>
 
-    <AboutProduct cardData={cardData}/>
+    {cardData.map((data)=>(
+    <AboutProduct  cardData={data} isDetailsLeft={data.isLeft}/>
+    ))}
     <ProductCard/>
   </>
   );

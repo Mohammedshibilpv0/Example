@@ -58,24 +58,33 @@ const Home = () => {
           This is The Future of Jewellery Store Management
         </h1>
 
-        <div className="card flex mt-5 px-7">
-          {helpCard.map((data) => (
-            <div className="ms-3">
-              <Card
-                description={data.description}
-                imageUrl={data.imageUrl}
-                title={data.title}
-              />
-            </div>
-          ))}
-        </div>
+        <div className="card mt-5 px-7">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {helpCard.map((data) => (
+      <div key={data.title} className="ms-3">
+        <Card
+          description={data.description}
+          imageUrl={data.imageUrl}
+          title={data.title}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+
       </div>
       
-      <div className="flex flex-col justify-center items-center font-bold mt-5 text-center pb-7 ">
-      <h3 className="text-lg">OUR CLIENTS</h3>
-      <h1 className="text-3xl font-bold mt-3">Brands That Trust Us!</h1>
-          <ClientCard/>
-      </div>
+      <div className="flex flex-col justify-center items-center font-bold mt-5 text-center pb-7">
+  <h3 className="text-lg sm:text-xl md:text-2xl">OUR CLIENTS</h3>
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3">Brands That Trust Us!</h1>
+
+  {/* Responsive ClientCard */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+    <ClientCard />
+   
+  </div>
+</div>
 
     </React.Fragment>
   );

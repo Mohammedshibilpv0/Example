@@ -49,16 +49,16 @@ export const Card = ({ className, img, children }) => {
     <div
       className={cn(
         "rounded-2xl h-full w-full p-6 overflow-hidden bg-white-50 shadow-lg border border-transparent relative",
-        "font-['Inter'] flex flex-col", 
+        "font-['Inter'] flex flex-col",
         className
       )}
     >
       {img && (
         <div className="absolute top-4 right-4 z-10">
-          <img 
-            src={img} 
-            alt="Card visual" 
-            className="w-24 h-24 object-cover rounded-lg"
+          <img
+            src={img}
+            alt="Card visual"
+            className="w-24 h-24 object-cover rounded-lg sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
           />
         </div>
       )}
@@ -66,19 +66,19 @@ export const Card = ({ className, img, children }) => {
         <div className="p-4">{children}</div>
       </div>
       {console.log(className)}
-      <CardFooter className={className}/>
+      <CardFooter className={className} />
     </div>
   );
 };
 
 export const CardTitle = ({ className, children }) => {
   return (
-    <h4 
+    <h4
       className={cn(
         "text-2xl font-bold text-zinc-900",
-        "tracking-tight", 
-        "mb-3 pb-2", 
-        "border-b border-zinc-200", 
+        "tracking-tight",
+        "mb-3 pb-2",
+        "border-b border-zinc-200",
         className
       )}
     >
@@ -89,12 +89,12 @@ export const CardTitle = ({ className, children }) => {
 
 export const CardDescription = ({ className, children }) => {
   return (
-    <p 
+    <p
       className={cn(
         "text-base text-zinc-600",
-        "font-['Inter']", 
+        "font-['Inter']",
         "tracking-wide leading-relaxed",
-        "font-normal", 
+        "font-normal",
         className
       )}
     >
@@ -103,23 +103,21 @@ export const CardDescription = ({ className, children }) => {
   );
 };
 
-
 export const CardFooter = ({ className }) => {
   return (
-    <div 
+    <div
       className={cn(
         "flex items-center justify-between",
         "border-t border-zinc-200",
         className
       )}
     >
-
-      <button 
+      <button
         className={cn(
           "px-4 py-2 bg-blue-500 text-white mt-3",
           "rounded-lg hover:bg-blue-600",
           "transition-colors duration-300",
-          "text-sm font-semibold",
+          "text-sm font-semibold"
         )}
       >
         Get Started
