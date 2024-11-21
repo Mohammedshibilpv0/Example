@@ -1,26 +1,21 @@
-import React from 'react';
-import Navbar from './components/navbar/navbar';
-import Banner from './components/Header/Header';
-import Body from './components/body/body';
-import FeaturedCard from './components/featured Component/featuredCard';
-import Services from './components/services/services';
-
-
-
-
-
-
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Navbar from "./components/navbar/navbar";
+import AuPay from "./pages/Product";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Banner/>
-    <Body/>  
-    <FeaturedCard/>
-    <Services/>
-  </>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/aupay" element={<AuPay />} />
+      </Routes>
+      <Footer/>
+    </>
   );
-}
+};
 
 export default App;

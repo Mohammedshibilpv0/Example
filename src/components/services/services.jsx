@@ -97,7 +97,7 @@ const content = [
             />
           </div>
         ),
-      },{},{},{},{  }
+      },{},{},{},{}
   ];
 const Services = () => {
     return (
